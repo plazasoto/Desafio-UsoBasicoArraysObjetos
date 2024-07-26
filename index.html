@@ -38,6 +38,77 @@ var dental = [
 
 //Agregar código para el desafio 2 aquí
 
+/* 1 */
+/* Horas por agregar en Traumatología*/
+let traumatologia2 = [
+    {
+        hora: '09:00',  
+        especialista: 'RENÉ POBLETE', 
+        paciente: 'ANA GELLONA',     
+        rut: '13123329-7', 
+        prevision: 'ISAPRE'
+    },
+    {
+        hora: '09:30',  
+        especialista: 'MARIA SOLAR', 
+        paciente: 'RAMIRO ANDRADE',     
+        rut: '12221451-K', 
+        prevision: 'FONASA'
+    },
+    {
+        hora: '10:00',  
+        especialista: 'RAUL LOYOLA', 
+        paciente: 'CARMEN ISLA',     
+        rut: '10112348-3', 
+        prevision: 'ISAPRE'
+    },
+    {
+        hora: '10:30',  
+        especialista: 'ANTONIO LARENAS', 
+        paciente: 'PABLO LOAYZA',     
+        rut: '13453234-1', 
+        prevision: 'ISAPRE'
+    },
+    {
+        hora: '12:00',  
+        especialista: 'MATIAS ARAVENA', 
+        paciente: 'SUSANA POBLETE',     
+        rut: '14345656-6 ', 
+        prevision: 'FONASA'
+    },
+]
+/* Concatenando arreglo traumatologia2 a traumatologia */
+traumatologia = traumatologia.concat(traumatologia2);
+
+/* 2 */
+/* Eliminar primera y última hora de Radiología*/
+radiologia.shift();
+radiologia.pop();
+
+/* 3 */
+/* Imprimir consultas de dental*/
+document.write(`<p>Lista de consultas para Dental:</p>`);
+//document.write("HORA - ESPECIALISTA - PACIENTE - RUT - PREVISIÓN");
+for (atencion of dental){
+    document.write(`<p>${Object.values(atencion).join(' - ')}</p>`);
+}
+document.write("<br>");
+
+/* 4 */
+/* Lista de todos los pacientes */
+document.write("<p>Pacientes:</p>");
+for (tabla of [radiologia, traumatologia, dental]){
+    for (atencion of tabla){
+        document.write(`<p>${atencion.paciente}</p>`)
+    }
+}
+document.write("<br>");
+
+/* 5 */
+
+
+
+
 
 
 
