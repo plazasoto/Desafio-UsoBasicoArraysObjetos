@@ -105,11 +105,24 @@ for (tabla of [radiologia, traumatologia, dental]){
 document.write("<br>");
 
 /* 5 */
+/* Pacientes con ISAPRE en Dental */
+document.write("<p>Pacientes con ISAPRE en Dental:</p>");
+for (atencion of dental){
+    if(atencion.prevision == 'ISAPRE'){
+        document.write(`<p>${atencion.paciente} - ${atencion.prevision}</p>`)
+    }
+}
+document.write("<br>");
 
-
-
-
-
+/* 6 */
+/* Pacientes con FONASA en Traumatología */
+document.write("<p>Pacientes con FONASA en Traumatología:</p>");
+for (atencion of traumatologia){
+    if(atencion.prevision == 'FONASA'){
+        document.write(`<p>${atencion.paciente} - ${atencion.prevision}</p>`)
+    }
+}
+document.write("<br>");
 
 
 //Agregar código para el desafio 2 aquí
